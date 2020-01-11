@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="FontImageSourcePractice.MainPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+    xmlns:local="clr-namespace:FontImageSourcePractice"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <StackLayout Spacing="20">
+        <!--  Place new controls here  -->
+        <Label
+            FontFamily="{StaticResource MyFontFamily}"
+            FontSize="Large"
+            HorizontalOptions="Center"
+            Text="こんにちは,絶対! &#xE804;"
+            TextColor="Red"
+            VerticalOptions="CenterAndExpand" />
+        <Label
+            FontFamily="{StaticResource MyFontFamily}"
+            FontSize="Large"
+            HorizontalOptions="Center"
+            Text="{x:Static local:IconFont.Music}"
+            TextColor="Red"
+            VerticalOptions="CenterAndExpand" />
+        <Label
+            FontSize="Large"
+            HorizontalOptions="Center"
+            TextColor="Red"
+            VerticalOptions="CenterAndExpand">
+            <Label.FormattedText>
+                <FormattedString>
+                    <Span FontSize="Large" Text="こんにちは,絶対!" />
+                    <Span
+                        FontFamily="{StaticResource MyFontFamily}"
+                        FontSize="Large"
+                        Text="{x:Static local:IconFont.Music}" />
+                </FormattedString>
+            </Label.FormattedText>
+        </Label>
+        <Image
+            Grid.Column="2"
+            HeightRequest="44"
+            HorizontalOptions="Center"
+            VerticalOptions="Center"
+            WidthRequest="44">
+            <Image.Source>
+                <FontImageSource
+                    FontFamily="{StaticResource MyFontFamily}"
+                    Glyph="{x:Static local:IconFont.Music}"
+                    Size="44"
+                    Color="Red" />
+            </Image.Source>
+        </Image>
+        <Button
+            Margin="20"
+            BackgroundColor="Red"
+            CornerRadius="50"
+            HeightRequest="90"
+            HorizontalOptions="Center"
+            VerticalOptions="Center"
+            WidthRequest="95">
+            <Button.ImageSource>
+                <FontImageSource
+                    FontFamily="{StaticResource MyFontFamily}"
+                    Glyph="{x:Static local:IconFont.Heart}"
+                    Size="44"
+                    Color="LightGreen" />
+            </Button.ImageSource>
+        </Button>
+    </StackLayout>
+
+</ContentPage>
