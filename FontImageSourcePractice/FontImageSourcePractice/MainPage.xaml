@@ -14,7 +14,7 @@
             FontFamily="{StaticResource MyFontFamily}"
             FontSize="Large"
             HorizontalOptions="Center"
-            Text="こんにちは,絶対! &#xE804;"
+            Text="こんにちは,世界! &#xE804;"
             TextColor="Red"
             VerticalOptions="CenterAndExpand" />
         <Label
@@ -31,7 +31,7 @@
             VerticalOptions="CenterAndExpand">
             <Label.FormattedText>
                 <FormattedString>
-                    <Span FontSize="Large" Text="こんにちは,絶対!" />
+                    <Span FontSize="Large" Text="こんにちは,世界!" />
                     <Span
                         FontFamily="{StaticResource MyFontFamily}"
                         FontSize="Large"
